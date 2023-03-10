@@ -8,7 +8,7 @@ public class test1 {
 		System.out.println(a + b);
 		
 //		2.64ビット整数の「1111111111」を定義し2倍した値を出力しなさい。
-		int x = 0b1111111111;
+		long x = 1111111111L;
 		System.out.println(x * 2);
 
 //		3.boolean型の変数の値に不正な文字列比較を入れてfalseを出力してください。	
