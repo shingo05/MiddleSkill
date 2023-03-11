@@ -6,15 +6,20 @@ public class test1 {
 		int a = 5;
 		int b = 9;
 		System.out.println(a + b);
-		
+
 //		2.64ビット整数の「1111111111」を定義し2倍した値を出力しなさい。
 		long x = 1111111111L;
 		System.out.println(x * 2);
 
 //		3.boolean型の変数の値に不正な文字列比較を入れてfalseを出力してください。	
-		boolean i;
-		i = a >= b;
-		System.out.println(i);
+		boolean H;
+//		i = a >= b;
+//		System.out.println(i);
+		char i = '花';
+
+		H = i == ('華');
+		System.out.println(H);
+
 	}
 
 }
