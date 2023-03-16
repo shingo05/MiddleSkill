@@ -1,5 +1,8 @@
 
 public class test1 {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// 改行
 		System.out.println("問１");
@@ -41,8 +44,12 @@ public class test1 {
 		int numf = -3;
 		String results = "";
 		
-		results = nume >= 0 ? numf >= 0 ? "both positive" : "one positive"  
-				: numf < 0 ? "both negative" : "one positive";
+//		results = nume >= 0 ? numf >= 0 ? "both positive" : "one positive"  
+//				: numf < 0 ? "both negative" : "one positive";
+		
+		results = nume >= 0 && numf >= 0 ? "both positive" 
+				: nume >= 0 || numf >= 0 ? "one positive"  
+				: nume < 0 && numf < 0 ? "both negative" : "etc";
 		
 		System.out.println(results);
 	}
