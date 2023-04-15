@@ -97,6 +97,7 @@ CREATE TABLE order_items(
     product_id INT,
     quantity INT,
     price DECIMAL(10,2),
+    CONSTRAINT pk_order_items PRIMARY KEY (order_id,product_id),
     CONSTRAINT fk_orders FOREIGN KEY(order_id) REFERENCES orders(order_id),
     CONSTRAINT fk_products FOREIGN KEY(product_id) REFERENCES products(product_id)
 );
