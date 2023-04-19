@@ -1,0 +1,73 @@
+⚫️課題2−4
+
+①顧客テーブルからすべての顧客の情報を取得するSQL文
+「SELECT * FROM customers;」
+
+
+
+②顧客テーブルから特定の顧客の名前(山田太郎)とメールアドレス(yamada@example.com)を取得するSQL文
+「
+SELECT * FROM 
+	customers
+WHERE 
+	(name='山田太郎' AND email='yamada@exmple.com');
+」
+
+
+③注文テーブルから注文日が2022年2月1日以降の注文情報を取得するSQL文
+「SELECT * FROM orders WHERE order_date >= '2022/2/1'; 」
+
+
+④注文アイテムテーブルから、エアコン を購入した注文数を取得し注文された合計金額を取得するSQL文　※LEFT JOINを利用すること
+「
+SELECT
+	SUM(O.price)
+FROM
+	order_items O 
+	LEFT JOIN products P
+	on O.product_id = P.product_id
+WHERE
+	P.name = 'エアコン';
+」
+
+
+
+⑤製品テーブルから、ある価格帯(5万円以上〜10万円以内)の製品を全て取得するSQL文
+※BETWEENを利用すること
+「SELECT * FROM products WHERE price BETWEEN 50000 AND 100000; 」
+
+
+⑥製品テーブルから、カテゴリごとに製品数と平均価格を取得するSQL文
+「
+SELECT
+	category,
+	AVG(price),
+	COUNT(category)
+FROM
+	products
+GROUP BY
+	category;
+」
+
+
+
+⑦注文情報テーブルから、各顧客が最も最近に注文した日付を取得するSQL文
+「
+SELECT
+    C.name,
+    C.customer_id,
+    O.MAX
+FROM
+    customers C
+    INNER JOIN(
+        SELECT
+            customer_id,
+            MAX(order_date)
+        FROM
+            orders
+        GROUP BY
+            customer_id
+        ) O
+        ON C.customer_id = O.customer_id;
+」
+
