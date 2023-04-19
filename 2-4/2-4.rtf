@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg932\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset128 HiraginoSans-W3;\f1\fnil\fcharset128 HiraginoSans-W4;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red11\green102\blue255;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c50196\c100000;\cssrgb\c50196\c50196\c50196;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+\'87\'40\'8c\'da\'8b\'71\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'82\'b7\'82\'d7\'82\'c4\'82\'cc\'8c\'da\'8b\'71\'82\'cc\'8f\'ee\'95\'f1\'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+
+\f0 \'81\'75 SELECT * FROM customers; \'81\'76
+\f1 \
+\
+\
+
+\f0 \'87\'41\'8c\'da\'8b\'71\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'93\'c1\'92\'e8\'82\'cc\'8c\'da\'8b\'71\'82\'cc\'96\'bc\'91\'4f
+\f1 (
+\f0 \'8e\'52\'93\'63\'91\'be\'98\'59
+\f1 )
+\f0 \'82\'c6\'83\'81\'81\'5b\'83\'8b\'83\'41\'83\'68\'83\'8c\'83\'58
+\f1 (yamada@example.com)
+\f0 \'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+
+\f0 \'81\'75\
+SELECT * FROM \
+	customers\
+WHERE \
+	(name='\'8e\'52\'93\'63\'91\'be\'98\'59' AND email='
+\f1 yamada@exmple.com
+\f0 ');\
+\'81\'76
+\f1 \
+\
+
+\f0 \
+\'87\'42\'92\'8d\'95\'b6\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'92\'8d\'95\'b6\'93\'fa\'82\'aa
+\f1 2022
+\f0 \'94\'4e
+\f1 2
+\f0 \'8c\'8e
+\f1 1
+\f0 \'93\'fa\'88\'c8\'8d\'7e\'82\'cc\'92\'8d\'95\'b6\'8f\'ee\'95\'f1\'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+
+\f0 \'81\'75 SELECT * FROM orders WHERE order_date >= '2022/2/1'; \'81\'76
+\f1 \
+\
+\
+
+\f0 \'87\'43\'92\'8d\'95\'b6\'83\'41\'83\'43\'83\'65\'83\'80\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'81\'41\'83\'47\'83\'41\'83\'52\'83\'93
+\f1  
+\f0 \'82\'f0\'8d\'77\'93\'fc\'82\'b5\'82\'bd\'92\'8d\'95\'b6\'90\'94\'82\'f0\'8e\'e6\'93\'be\'82\'b5\'92\'8d\'95\'b6\'82\'b3\'82\'ea\'82\'bd\'8d\'87\'8c\'76\'8b\'e0\'8a\'7a\'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6\'81\'40
+\f1 \'81\'a6LEFT JOIN
+\f0 \'82\'f0\'97\'98\'97\'70\'82\'b7\'82\'e9\'82\'b1\'82\'c6
+\f1 \
+
+\f0 \'81\'75\
+SELECT\
+	SUM(O.price)\
+FROM\
+	order_items O \
+	LEFT JOIN products P\
+	on O.product_id = P.product_id\
+WHERE\
+	P.name = '\'83\'47\'83\'41\'83\'52\'83\'93';\
+\'81\'76\
+
+\f1 \
+
+\f0 \'87\'44\'90\'bb\'95\'69\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'81\'41\'82\'a0\'82\'e9\'89\'bf\'8a\'69\'91\'d1
+\f1 (5
+\f0 \'96\'9c\'89\'7e\'88\'c8\'8f\'e3\'81\'60
+\f1 10
+\f0 \'96\'9c\'89\'7e\'88\'c8\'93\'e0
+\f1 )
+\f0 \'82\'cc\'90\'bb\'95\'69\'82\'f0\'91\'53\'82\'c4\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+\'81\'a6BETWEEN
+\f0 \'82\'f0\'97\'98\'97\'70\'82\'b7\'82\'e9\'82\'b1\'82\'c6
+\f1 \
+
+\f0 \'81\'75 SELECT * FROM products WHERE price BETWEEN 50000 AND 100000; \'81\'76
+\f1 \
+\
+
+\f0 \'87\'45\'90\'bb\'95\'69\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'81\'41\'83\'4a\'83\'65\'83\'53\'83\'8a\'82\'b2\'82\'c6\'82\'c9\'90\'bb\'95\'69\'90\'94\'82\'c6\'95\'bd\'8b\'cf\'89\'bf\'8a\'69\'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+
+\f0 \'81\'75\
+SELECT\
+	category,\
+	AVG(price),\
+	COUNT(category)\
+FROM\
+	products\
+GROUP BY\
+	category;\
+\'81\'76\
+\
+\'87\'46\'92\'8d\'95\'b6\'8f\'ee\'95\'f1\'83\'65\'81\'5b\'83\'75\'83\'8b\'82\'a9\'82\'e7\'81\'41\'8a\'65\'8c\'da\'8b\'71\'82\'aa\'8d\'c5\'82\'e0\'8d\'c5\'8b\'df\'82\'c9\'92\'8d\'95\'b6\'82\'b5\'82\'bd\'93\'fa\'95\'74\'82\'f0\'8e\'e6\'93\'be\'82\'b7\'82\'e9
+\f1 SQL
+\f0 \'95\'b6
+\f1 \
+
+\f0 \'81\'75\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \outl0\strokewidth0 \strokec3 SELECT\strokec2 \
+    C\strokec4 .\strokec2 name\strokec4 ,\strokec2 \
+    C\strokec4 .\strokec2 customer_id\strokec4 ,\strokec2 \
+    O\strokec4 .\strokec2 MAX\
+\strokec3 FROM\strokec2 \
+    customers C\
+    \strokec3 INNER\strokec2  \strokec3 JOIN\strokec4 (\strokec2 \
+        \strokec3 SELECT\strokec2 \
+            customer_id\strokec4 ,\strokec2 \
+            MAX\strokec4 (\strokec2 order_date\strokec4 )\strokec2 \
+        \strokec3 FROM\strokec2 \
+            orders\
+        \strokec3 GROUP\strokec2  \strokec3 BY\strokec2 \
+            customer_id\
+        \strokec4 )\strokec2  O\
+    \strokec3 ON\strokec2  C\strokec4 .\strokec2 customer_id \strokec4 =\strokec2  O\strokec4 .\strokec2 customer_id\strokec4 ;
+\f0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \'81\'76}
