@@ -1,0 +1,8 @@
+⚫️課題2−6
+
+①顧客ID「1」が注文した注文アイテムテーブルを削除するSQL文
+※EXISTSを利用すること
+「
+DELETE FROM order_items
+    WHERE EXISTS (SELECT orders.customer_id FROM orders WHERE orders.order_id = order_items.order_id AND orders.customer_id = 1);
+」
