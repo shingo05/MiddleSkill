@@ -34,7 +34,7 @@ Model
 
 「view」→「controller」→「form」→「controller」→「Entity」→「sevice」
 →「Entity」→「dao」→「Entity」→「DB」→「Entity」→「daoimpl」
-→「Entity」→「serviceimpl」→「dao」→「controller」→「form」→「controller」
+→「Entity」→「serviceimpl」→「dto」→「controller」→「form」→「controller」
 →「view」
 
 
@@ -56,5 +56,5 @@ Model
 ⑨各コンポーネントの責務を答えなさい。（Configuration）
 
 コンフィグレーションレイヤを扱う。
-構成管理の設定などを表現する。
+構成管理や設定などを表現する。
 
