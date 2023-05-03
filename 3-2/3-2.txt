@@ -37,12 +37,6 @@ Model
 →「Entity」→「serviceimpl」→「dto」→「controller」→「form」→「controller」
 →「view」
 
-「view」→「controller」→「　」→「controller」→「　」→「　」
-→「　」→「　」→「Entity」→「DB」→「Entity」→「daoimpl」
-→「　」→「　l」→「　」→「controller」→「　」→「controller」
-→「view」
-
-
 
 ⑦各コンポーネントの責務を答えなさい。（Controller）
 
