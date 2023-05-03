@@ -11,7 +11,6 @@
 ②次の中でリポジトに当てはまるものはどれになりますか？(controller、service、view、seviceimpl、entity、dao、daoimpl)
 
 dao
-daoimpl
 
 
 ③次の中でリポジトリで取得した値を格納するものはどれですか？(controller、service、view、seviceimpl、entity、dao、daoimpl)
