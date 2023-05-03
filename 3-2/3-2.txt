@@ -33,7 +33,7 @@ Model
 
 
 「view」→「controller」→「form」→「controller」→「dto」→「service」
-→「Entity」→「dao」→「Entity」→「DB」→「Entity」→「daoimpl」
+→「dao」→「daoimpl」→「Entity」→「DB」→「Entity」→「daoimpl」
 →「Entity」→「serviceimpl」→「dto」→「controller」→「form」→「controller」
 →「view」
 
