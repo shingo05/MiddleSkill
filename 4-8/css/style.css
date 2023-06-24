@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+body{
+    width: 960px;
+    padding: 4%;
+    font-family: 'Noto Serif JP', sans-serif;
+    color: #808080;
+    position:relative;
+}
+
+.top_title{
+    text-align: center;
+    font-size: 20px;
+    width: 400px;
+    float: left;
+}
+
+.top_alea{
+    width: 500px;
+}
+
+ul{
+    display:flex;
+}
+
+.top_alea li{
+    float: right;
+    font-size: 12px;
+    display:flex;
+    margin: 20px;
+} 
+
+.top_img{
+    width: 50px;
+}
+
+.unit_title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    height: 60px;
+    padding-top: 60px;
+}
+
+.center{
+    font-size: 10px;
+    margin:0 auto;
+}
+
+.about_menu{
+    width: 600px;
+    margin:0 auto;
+}
+
+.about_name{
+    margin-bottom: 20px;
+}
+
+.about_prof{
+    margin-top: 25px;
+}
+
+.work_img{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imag_works{
+    margin: 10px;
+}
+
+.news{
+    width: 600px;
+    margin:0 auto;
+}
+
+.imag_works img{
+    width: 300px;
+}
+
+.news_menu{
+    display: flex;
+    border-top: 0.5px solid #808080;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.news_view{
+    margin-left: 80px;
+}
+
+.contact_menu{
+    display: flex;
+    margin-top: 5px;
+}
+
+.contact_name{
+    width: 50px;
+}
+
+.inputer{
+    margin-left: 50px;
+}
+
+.contact{
+    width: 600px;
+    margin:0 auto;
+}
+
+.contact_input{
+    width: 500px;
+}
+
+.contact_tarea{
+    width: 500px;
+    height: 100px;
+}
+
+.send{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button{
+    display: inline-block;
+    width: 80px;
+    font-size: 10pt;
+    text-align: center;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000; 
+}
+
+.button::after {
+  position: absolute;
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  top: 50%;
+  right: .4em;
+  left: auto;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.button:hover {
+	background: #fff;
+	color: #333;
+}
+
+footer{
+    height: 15px;
+    font-size: 0.5px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: black;
+    color: #fff;
+}
+
+/*------ スライダーの横幅 ------*/
+.slider{
+    width:100%;
+    margin:0 auto;
+}
+  
+/*------ スライダー画像 ------*/
+.slider img{
+    width:100%;
+    height: 240px;
+}
+  
+/*-------- 高さ調整 ----------*/
+.slider .slick-slide{
+    height:auto!important;
+}
+  
+/*---------- 矢印 ----------*/
+.slider .slick-next{
+  right:0!important;
+}
+  
+.slider .slick-prev{
+  left:0!important;
+}
+
+.slider .slick-arrow{
+    width: initial!important;
+    height: initial!important;
+    z-index:2!important;
+}
+
+.slider .slick-arrow:before{
+    content: "";
+}
+
+#zoomback {
+    /* 絶対位置に配置 */
+    position:absolute;
+    top:0;
+    
+    /* 画面いっぱいに */
+    width:100%;
+    height:100%;
+    
+    /* 背景を少し透過 */
+    background-color:rgba(0,0,0,0.8);
+    
+    /* 中のimgを中央揃え */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    display:none;
+}
+       
+/* 拡大画像のサイズを調整 */
+#zoomimg {
+    width:50%;
+    border:solid 5px #fff;
+}
+
+.deka {
+    animation:deka 0.3s ease-out;
+}
+        
+@keyframes deka {
+        
+    from {
+        transform:scale(0);
+    }
+        
+}
+
+@media screen and (max-width: 600px) {
+    .about_menu{
+        width: 450px;
+        margin:0 auto;
+    }
+
+    .works{
+        margin:0 auto;
+    }
+
+    .work_img{
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    .news{
+        width: 450px;
+        margin:0 auto;
+    }
+
+    .news_menu{
+        display: flex;
+        flex-direction: column;  
+        align-items: left;
+    }
+
+    .news_data{
+        margin-left: 40px;
+    }
+
+    .news_view{
+        margin-left: 40px;
+    }
+}
